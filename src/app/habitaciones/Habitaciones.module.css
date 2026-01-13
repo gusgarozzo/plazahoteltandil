@@ -1,0 +1,86 @@
+.roomsList {
+  background: var(--background);
+}
+
+.roomRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-bottom: 8rem;
+  align-items: center;
+}
+
+.roomRow:last-child {
+  margin-bottom: 0;
+}
+
+.roomRow.reverse .imageCol {
+  order: 2;
+}
+
+.imageCol {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.imageCol img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.infoCol h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.infoCol p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--foreground);
+}
+
+.bookBtn {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.bookBtn:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .roomRow {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .roomRow.reverse .imageCol {
+    order: 0;
+  }
+}

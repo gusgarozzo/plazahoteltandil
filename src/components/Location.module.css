@@ -1,0 +1,103 @@
+.location {
+  background: var(--background);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.info span {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.info h2 {
+  font-size: 3.5rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.detailItem {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon {
+  color: var(--secondary);
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.detailItem h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+.detailItem p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.mapBtn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-radius: 4px;
+}
+
+.mapBtn:hover {
+  background: var(--primary);
+  color: white !important;
+}
+
+.mapContainer {
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mapContainer iframe {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .info h2 {
+    font-size: 2.8rem;
+  }
+
+  .mapContainer {
+    height: 400px;
+  }
+}

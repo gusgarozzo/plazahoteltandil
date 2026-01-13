@@ -1,0 +1,117 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  background: transparent;
+  transition: var(--transition-smooth);
+}
+
+.navbar *:not(.contactBtn) {
+  color: white; /* Default to white when transparent over Hero */
+}
+
+.logo span {
+  color: var(--secondary) !important;
+}
+
+.navbarScrolled {
+  padding: 1rem 0;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbarScrolled *:not(.contactBtn) {
+  color: var(--foreground);
+}
+
+.navbarScrolled .logo span {
+  color: var(--secondary) !important;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  height: 60px;
+  width: auto;
+  transition: var(--transition-smooth);
+}
+
+.navbar:not(.navbarScrolled) .logoImg {
+  filter: brightness(0) invert(1); /* Makes black logo white */
+}
+
+@media (max-width: 768px) {
+  .logoImg {
+    height: 45px;
+  }
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navLinks li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navLinks li a:hover {
+  color: var(--secondary) !important;
+}
+
+.contactBtn {
+  background: var(--secondary);
+  color: var(--primary) !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.contactBtn:hover {
+  background: var(--secondary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.mobileMenuBtn {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.mobileMenuBtn span {
+  width: 25px;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition-smooth);
+}
+
+@media (max-width: 992px) {
+  .navLinks {
+    display: none;
+  }
+
+  .mobileMenuBtn {
+    display: flex;
+  }
+}
