@@ -24,7 +24,8 @@ export default function Hero() {
             Bienvenidos al Corazón de Tandil
           </span>
           <h1>
-            Donde la Tradición <br /> Encuentra la Excelencia
+            Donde la Tradición <span className={styles.desktopBreak} />{" "}
+            Encuentra la Excelencia
           </h1>
           <p>
             Disfrute de una estadía inolvidable en el hotel más emblemático de

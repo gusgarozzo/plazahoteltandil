@@ -38,7 +38,7 @@
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
-  background: var(--accent);
+  background: #f9f9f9; /* Subtle off-white */
   transition: var(--transition-smooth);
 }
 
@@ -74,9 +74,20 @@
 
 .infoCard,
 .hoursCard {
-  background: var(--accent);
+  background: #f9f9f9;
   padding: 2.5rem;
-  border-radius: 8px;
+  border-radius: 4px; /* Unify with inputs */
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--secondary); /* Brand accent */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03); /* Softer shadow */
+  transition: var(--transition-smooth);
+}
+
+.infoCard:hover,
+.hoursCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--secondary);
 }
 
 .infoCard h3,

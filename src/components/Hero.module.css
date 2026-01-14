@@ -5,7 +5,8 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--primary);
+  background-color: white;
 }
 
 .background {
@@ -31,8 +32,8 @@
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(26, 42, 68, 0.4) 0%,
-    rgba(26, 42, 68, 0.6) 100%
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.7) 100%
   );
   z-index: -1;
 }
@@ -44,13 +45,19 @@
 
 .textWrapper {
   max-width: 800px;
+  width: 100%;
+}
+
+.desktopBreak {
+  display: block;
 }
 
 .heroLogo {
   height: 80px;
   width: auto;
   margin-bottom: 2rem;
-  filter: brightness(0) invert(1);
+  /* Remove inversion for white background */
+  /* filter: brightness(0) invert(1); */
 }
 
 .subtitle {
@@ -66,14 +73,14 @@
 .hero h1 {
   font-size: 4.5rem;
   margin-bottom: 2rem;
-  color: white;
+  color: var(--primary);
 }
 
 .hero p {
   font-size: 1.25rem;
   line-height: 1.6;
   margin-bottom: 3rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-muted);
   max-width: 600px;
 }
 
@@ -101,10 +108,10 @@
 
 .secondaryBtn {
   background: transparent;
-  color: white !important;
+  color: var(--primary) !important;
   padding: 1rem 2.5rem;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--primary);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -134,13 +141,13 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted);
 }
 
 .mouse {
   width: 26px;
   height: 42px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  border: 2px solid var(--border);
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -149,7 +156,7 @@
 .wheel {
   width: 4px;
   height: 8px;
-  background: white;
+  background: var(--primary);
   border-radius: 4px;
   margin-top: 8px;
 }
@@ -161,21 +168,73 @@
 }
 
 @media (max-width: 768px) {
+  .heroLogo {
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.2em;
+  }
+
+  .heroContent {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .textWrapper {
+    width: 100%;
+  }
+
+  .desktopBreak {
+    display: none;
+  }
+
   .hero h1 {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    word-wrap: break-word;
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
   }
 
   .ctaWrapper {
     flex-direction: column;
     width: 100%;
+    gap: 0.8rem;
   }
 
   .primaryBtn,
   .secondaryBtn {
     text-align: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .scrollIndicator {
+    bottom: 1.5rem;
+    gap: 0.4rem;
+  }
+
+  .scrollIndicator span {
+    font-size: 0.65rem;
+  }
+
+  .mouse {
+    width: 20px;
+    height: 32px;
+    border-width: 1.5px;
+  }
+
+  .wheel {
+    width: 3px;
+    height: 6px;
+    margin-top: 6px;
   }
 }
