@@ -88,7 +88,7 @@ export default function HabitacionesPage() {
                   ))}
                 </div>
                 <a
-                  href={`https://wa.me/5492494421212?text=Hola,%20quisiera%20consultar%20disponibilidad%20en%20el%20Plaza%20Hotel%20Tandil%20para%20la%20habitación:%20${encodeURIComponent(
+                  href={`https://wa.me/5492494600471?text=Hola,%20quisiera%20consultar%20disponibilidad%20en%20el%20Plaza%20Hotel%20Tandil%20para%20la%20habitación:%20${encodeURIComponent(
                     room.name
                   )}`}
                   target="_blank"
