@@ -140,7 +140,38 @@
   transform: translateY(-2px);
 }
 
-/* ... existing scroll indicator ... */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+}
+.scrollIndicator span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid var(--border); /* Using a lighter border */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 4px;
+  margin-top: 8px;
+}
 
 @media (max-width: 992px) {
   .hero h1 {
