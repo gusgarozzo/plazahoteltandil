@@ -67,6 +67,9 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .bookBtn:hover {
@@ -82,5 +85,13 @@
 
   .roomRow.reverse .imageCol {
     order: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .bookBtn {
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+    width: 100%;
   }
 }
