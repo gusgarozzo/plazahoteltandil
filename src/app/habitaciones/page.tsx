@@ -1,10 +1,15 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import styles from "./Habitaciones.module.css";
 import { Coffee, Tv, Wifi, Wind, Bath, ShieldCheck } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Habitaciones | Plaza Hotel Tandil",
+  description:
+    "Conozca nuestras habitaciones en Plaza Hotel Tandil. Suites Ejecutivas, Dobles y Triples con el mayor confort y servicios de categoría en el centro de la ciudad.",
+};
 
 const allRooms = [
   {

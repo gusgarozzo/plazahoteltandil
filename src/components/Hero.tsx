@@ -24,12 +24,13 @@ export default function Hero() {
             Bienvenidos al Corazón de Tandil
           </span>
           <h1>
-            Donde la Tradición <span className={styles.desktopBreak} />{" "}
-            Encuentra la Excelencia
+            Donde la Tradición de Tandil{" "}
+            <span className={styles.desktopBreak} /> Encuentra la Excelencia
           </h1>
           <p>
-            Disfrute de una estadía inolvidable en el hotel más emblemático de
-            la ciudad. Confort, spa y gastronomía de primer nivel.
+            Disfrute de una estadía inolvidable en el{" "}
+            <strong>Plaza Hotel Tandil</strong>. Alojamiento de categoría, Spa y
+            gastronomía en pleno centro de la ciudad.
           </p>
 
           <div className={styles.ctaWrapper}>

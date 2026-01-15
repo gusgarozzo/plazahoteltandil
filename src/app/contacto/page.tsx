@@ -1,14 +1,38 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import styles from "./Contacto.module.css";
 import { Mail, MapPin, Phone } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
+import { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "Contacto | Plaza Hotel Tandil",
+  description:
+    "Contáctenos para reservas y consultas en Plaza Hotel Tandil. Teléfono, email y ubicación en el centro de la ciudad.",
+};
 
 export default function ContactoPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    name: "Plaza Hotel Tandil",
+    telephone: "+542494600471",
+    email: "plazahoteltandil@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Gral. Pinto 438",
+      addressLocality: "Tandil",
+      addressRegion: "Buenos Aires",
+      postalCode: "B7000",
+      addressCountry: "AR",
+    },
+  };
+
   return (
     <main>
+      <JsonLd data={structuredData} />
       <Navbar />
       <PageHeader
         title="Contacto & Reservas"
@@ -21,61 +45,7 @@ export default function ContactoPage() {
           <div className={styles.grid}>
             <div className={styles.formCol}>
               <h2>Envíenos su consulta</h2>
-              <form
-                className={styles.form}
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const formData = new FormData(e.currentTarget);
-                  const name = formData.get("name");
-                  const email = formData.get("email");
-                  const subject = formData.get("subject");
-                  const message = formData.get("message");
-                  const body = `Nombre: ${name}%0D%0AEmail: ${email}%0D%0AAsunto: ${subject}%0D%0AMensaje: ${message}`;
-                  window.location.href = `mailto:plazahoteltandil@gmail.com?subject=Consulta Web: ${subject}&body=${body}`;
-                }}
-              >
-                <div className={styles.formGroup}>
-                  <label htmlFor="name">Nombre Completo</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Ej: Juan Pérez"
-                    required
-                  />
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="ejemplo@correo.com"
-                    required
-                  />
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="subject">Asunto</label>
-                  <select id="subject" name="subject">
-                    <option>Consulta General</option>
-                    <option>Reserva de Habitaciones</option>
-                    <option>Eventos & Salón</option>
-                    <option>Spa & Bienestar</option>
-                  </select>
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="message">Mensaje</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    placeholder="Cuéntenos cómo podemos ayudarle..."
-                  ></textarea>
-                </div>
-                <button type="submit" className={styles.submitBtn}>
-                  Enviar Mensaje
-                </button>
-              </form>
+              <ContactForm />
             </div>
 
             <div className={styles.infoCol}>

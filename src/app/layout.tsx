@@ -14,11 +14,20 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Plaza Hotel de Tandil | Experiencia de Lujo y Tradición",
+  title: {
+    template: "%s | Plaza Hotel Tandil",
+    default: "Plaza Hotel en Tandil | Alojamiento, Spa y Restaurante",
+  },
   description:
-    "Descubra el Plaza Hotel de Tandil. Habitaciones exclusivas, Spa, Restaurante y una ubicación privilegiada en el corazón de la ciudad.",
+    "Descubra el Plaza Hotel de Tandil. El hotel más emblemático ubicado en pleno centro. Habitaciones exclusivas, Spa, Restaurante y salones para eventos en Tandil.",
   icons: {
     icon: "/logo.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://plazahoteltandil.com.ar",
+    siteName: "Plaza Hotel Tandil",
   },
 };
 
