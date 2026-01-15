@@ -19,7 +19,6 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className={styles.textWrapper}
         >
-          <img src="/logo.png" alt="" className={styles.heroLogo} />
           <span className={styles.subtitle}>
             Bienvenidos al Corazón de Tandil
           </span>
