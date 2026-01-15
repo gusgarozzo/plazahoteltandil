@@ -23,21 +23,21 @@ export default function Hero() {
             Bienvenidos al Corazón de Tandil
           </span>
           <h1>
-            Donde la Tradición de Tandil{" "}
-            <span className={styles.desktopBreak} /> Encuentra la Excelencia
+            Experiencia Premium en <span className={styles.desktopBreak} /> el
+            Centro de Tandil
           </h1>
           <p>
-            Disfrute de una estadía inolvidable en el{" "}
-            <strong>Plaza Hotel Tandil</strong>. Alojamiento de categoría, Spa y
-            gastronomía en pleno centro de la ciudad.
+            Ubicación privilegiada, Spa de lujo y la mejor gastronomía. <br />
+            Ideal para parejas, descansos y viajes de negocios.
           </p>
 
           <div className={styles.ctaWrapper}>
-            <Link href="/habitaciones" className={styles.primaryBtn}>
-              Ver Habitaciones
-            </Link>
-            <Link href="/contacto" className={styles.secondaryBtn}>
-              Reservar Ahora
+            <Link
+              href="https://wa.me/5492494600471?text=Hola,%20quisiera%20consultar%20disponibilidad%20en%20el%20Plaza%20Hotel%20Tandil"
+              target="_blank"
+              className={styles.primaryBtn}
+            >
+              Consultar Disponibilidad
             </Link>
           </div>
         </motion.div>

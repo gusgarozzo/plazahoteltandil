@@ -10,19 +10,22 @@ const rooms = [
     id: 1,
     name: "Suite Ejecutiva",
     image: "/room-suite.png",
+    useCase: "Ideal para parejas y estadías de lujo",
     features: ["Vista Ciudad", "King Size", "Sala de Estar"],
   },
   {
     id: 2,
     name: "Habitación Matrimonial",
     image: "/room-double.png",
+    useCase: "Confort superior y descanso asegurado",
     features: ["Cama Queen", "Escritorio", "Frigobar"],
   },
   {
     id: 3,
     name: "Habitación Single Premium",
     image: "/room-single.png",
-    features: ["Cama Single", "Ideal Business", "Wifi High-Speed"],
+    useCase: "Perfecta para viajes de negocios",
+    features: ["Cama Single", "Wifi High-Speed", "Escritorio"],
   },
 ];
 
@@ -34,8 +37,8 @@ export default function RoomsPreview() {
           <span className="text-gold">Alojamiento Exclusivo</span>
           <h2>Habitaciones & Suites</h2>
           <p>
-            Cada una de nuestras habitaciones está diseñada para ofrecer el
-            máximo confort y elegancia.
+            Espacios diseñados para el bienestar. Encuentre la opción perfecta
+            para su estadía en Tandil.
           </p>
         </div>
 
@@ -51,6 +54,7 @@ export default function RoomsPreview() {
               </div>
               <div className={styles.content}>
                 <h3>{room.name}</h3>
+                <p className={styles.useCase}>{room.useCase}</p>
                 <ul className={styles.features}>
                   {room.features.map((feature, idx) => (
                     <li key={idx}>{feature}</li>
@@ -63,7 +67,7 @@ export default function RoomsPreview() {
                   <Wind size={18} />
                 </div>
                 <Link href="/habitaciones" className={styles.cardBtn}>
-                  Ver Detalles
+                  Ver Disponibilidad
                 </Link>
               </div>
             </motion.div>

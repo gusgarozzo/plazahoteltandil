@@ -79,23 +79,25 @@
 
 .hero h1 {
   font-size: 5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   color: var(--primary);
   font-family: var(--font-cormorant);
   font-weight: 500;
   letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   line-height: 1.6;
   margin-bottom: 3.5rem;
   color: var(--text-muted);
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .ctaWrapper {
   display: flex;
+  justify-content: center;
   gap: 2rem;
 }
 

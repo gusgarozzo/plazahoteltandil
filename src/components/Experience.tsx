@@ -8,7 +8,7 @@ export default function Experience() {
       <div className={`container ${styles.grid}`}>
         <div className={styles.textContent}>
           <span className="text-gold">Nuestra Historia</span>
-          <h2>Una Experiencia Centenaria</h2>
+          <h2>Una Experiencia con historia</h2>
           <p>
             Situado en el corazón de Tandil, el Plaza Hotel ha sido testigo de
             la evolución de nuestra ciudad. Combinamos la elegancia
