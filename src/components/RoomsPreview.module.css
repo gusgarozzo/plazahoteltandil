@@ -79,39 +79,31 @@
   min-height: 2.4em; /* Ensure alignment */
 }
 
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.features li {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  position: relative;
-  padding-left: 1rem;
-}
-
-.features li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  background: var(--secondary);
-  border-radius: 50%;
-}
-
+/* Consolidated amenities/features section */
 .amenities {
   display: flex;
-  gap: 1.2rem;
-  color: var(--text-muted);
+  flex-direction: column;
+  gap: 0.8rem;
   margin-bottom: 2rem;
   padding-top: 1rem;
   border-top: 1px solid var(--border);
+}
+
+.featureItem {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.featureLabel {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-width: 90px;
 }
 
 .cardBtn {

@@ -31,7 +31,7 @@ export default function Experience() {
         </div>
         <div className={styles.imageContent}>
           <div className={styles.imageWrapper}>
-            <img src="/lobby.png" alt="Plaza Hotel Lobby" />
+            <img src="/landscape.png" alt="Plaza Hotel Lobby" />
           </div>
           <div className={styles.experienceBox}>
             <span className={styles.years}>+40</span>

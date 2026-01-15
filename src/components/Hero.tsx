@@ -19,25 +19,27 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className={styles.textWrapper}
         >
-          <span className={styles.subtitle}>
-            Bienvenidos al Corazón de Tandil
-          </span>
+          <span className={styles.subtitle}>Plaza Hotel Tandil</span>
           <h1>
-            Experiencia Premium en <span className={styles.desktopBreak} /> el
-            Centro de Tandil
+            Tu lugar en el <span className={styles.desktopBreak} />
+            Centro de la Ciudad
           </h1>
           <p>
-            Ubicación privilegiada, Spa de lujo y la mejor gastronomía. <br />
-            Ideal para parejas, descansos y viajes de negocios.
+            Ubicación privilegiada frente a la plaza principal.
+            <br />
+            Spa, Piscina & Gastronomía.
           </p>
 
           <div className={styles.ctaWrapper}>
             <Link
-              href="https://wa.me/5492494600471?text=Hola,%20quisiera%20consultar%20disponibilidad%20en%20el%20Plaza%20Hotel%20Tandil"
+              href="https://wa.me/5492494600471?text=Hola,%20quisiera%20reservar%20en%20el%20Plaza%20Hotel%20Tandil"
               target="_blank"
               className={styles.primaryBtn}
             >
               Consultar Disponibilidad
+            </Link>
+            <Link href="/habitaciones" className={styles.secondaryBtn}>
+              Ver Habitaciones
             </Link>
           </div>
         </motion.div>

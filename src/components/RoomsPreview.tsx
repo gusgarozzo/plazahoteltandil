@@ -55,17 +55,25 @@ export default function RoomsPreview() {
               <div className={styles.content}>
                 <h3>{room.name}</h3>
                 <p className={styles.useCase}>{room.useCase}</p>
-                <ul className={styles.features}>
-                  {room.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
                 <div className={styles.amenities}>
+                  <div className={styles.featureItem}>
+                    <span className={styles.featureLabel}>Capacidad:</span>{" "}
+                    {room.features[0]}
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.featureLabel}>Destacado:</span>{" "}
+                    {room.features[1]}
+                  </div>
+                </div>
+                {/* 
+                <div className={styles.amenitiesIcons}>
                   <Wifi size={18} />
                   <Tv size={18} />
                   <Coffee size={18} />
                   <Wind size={18} />
-                </div>
+                </div> 
+                */}
+
                 <Link href="/habitaciones" className={styles.cardBtn}>
                   Ver Disponibilidad
                 </Link>
